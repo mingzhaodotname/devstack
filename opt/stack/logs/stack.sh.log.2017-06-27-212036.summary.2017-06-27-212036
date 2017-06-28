@@ -1,0 +1,29 @@
+2017-06-28 04:20:37.122 | stack.sh log /opt/stack/logs/stack.sh.log.2017-06-27-212036
+2017-06-28 04:20:44.753 | Installing package prerequisites
+2017-06-28 04:22:57.766 | Starting RabbitMQ
+2017-06-28 04:23:19.819 | Installing OpenStack project source
+2017-06-28 04:28:43.263 | Installing Tempest
+2017-06-28 04:31:49.239 | Configuring and starting MySQL
+2017-06-28 04:32:01.233 | Starting Keystone
+2017-06-28 04:45:56.902 | Configuring Horizon
+2017-06-28 05:08:15.825 | Configuring Glance
+2017-06-28 05:08:35.140 | Configuring Neutron
+2017-06-28 05:10:13.772 | Configuring Cinder
+2017-06-28 05:10:34.760 | Configuring Nova
+2017-06-28 05:12:37.362 | Configuring placement
+2017-06-28 05:13:38.211 | Starting Glance
+2017-06-28 05:13:54.693 | Uploading images
+2017-06-28 05:14:05.726 | Starting Nova API
+2017-06-28 05:14:26.473 | Starting Neutron
+2017-06-28 05:14:40.806 | Starting Placement
+2017-06-28 05:15:11.484 | Creating initial neutron network elements
+2017-06-28 05:18:17.785 | Starting Nova
+2017-06-28 05:20:35.772 | Starting Cinder
+2017-06-28 05:21:26.606 | Starting Horizon
+2017-06-28 05:24:30.301 | Configuring lvm.conf global device filter
+2017-06-28 05:24:31.282 | set lvm.conf device global_filter to: global_filter = [ "a|loop0|", "a|loop1|", "r|.*|" ] # from devstack
+2017-06-28 05:24:31.866 | Initializing Tempest
+2017-06-28 05:30:06.842 | Installing Tempest Plugins
+2017-06-28 05:30:07.874 | WARNING: 
+2017-06-28 05:30:07.874 | Using lib/neutron-legacy is deprecated, and it will be removed in the future
+2017-06-28 05:30:07.875 | stack.sh completed in 4180 seconds.
