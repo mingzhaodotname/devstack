@@ -1,0 +1,16 @@
+# interfaces(5) file used by ifup(8) and ifdown(8)
+auto lo
+iface lo inet loopback
+
+auto enp0s3
+# After changing to static, need to run these commands:
+#    ifdown enp0s3
+#    ip addr flush dev enp0s3
+#    ifup enp0s3
+# To get gateway:
+#    ip route show
+iface enp0s3 inet static
+    address 10.0.2.15
+    netmask 255.255.255.0
+    gateway 10.0.2.2
+    broadcast 10.0.2.255
