@@ -23,3 +23,9 @@
     ```
 * other docs:
   * http://www.techrepublic.com/article/how-to-install-openstack-on-a-single-ubuntu-server-virtual-machine/
+  
+# behind a proxy
+* inc/python
+  * function pip_install
+    * sudo_pip http_proxy=  # e.g. line 337, need to setup the proxy again. (or setup root proxy)
+ 
