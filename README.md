@@ -9,13 +9,13 @@
   $ cd
   $ git clone https://git.openstack.org/openstack-dev/devstack
   $ cd devstack
-  $ create local.conf (e.g. from samples/local.conf)
+  $ create local.conf (e.g. from samples/local.conf, or devstack.git/opt/stack/devstack/local.conf)
   $ ./stack.sh
   ```
 * fixes
   * can also use this to create use: devstack/tools/create-stack-user.sh (maybe used as a after-art check)
-  * have to sudo chmod -R +rwx .cache, otherwise it has permission issues.
-  * static ip address - after changing /etc/network/interfaces, need to run these
+  * mkdir ~/.cache, or have to sudo chmod -R +rwx .cache, otherwise it has permission issues.
+  * static ip address - after changing /etc/network/interfaces (e.g. devstack.git/etc/network/interfaces), need to run these
     ```
     ifdown enp0s3
     ip addr flush dev enp0s3
