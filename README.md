@@ -21,6 +21,14 @@
     ip addr flush dev enp0s3
     ifup enp0s3
     ```
+* problems and solutions
+  * can not install
+    * sudo apt install xxx
+  * manage.py not found in lib/horizon: 
+     * export PYTHON=/usr/bin/python  # add this line before the following line
+     * (cd $HORIZON_DIR; $PYTHON manage.py compilemessages)  # e.g. line 84
+  * init_placement
+    * skip it
 * other docs:
   * http://www.techrepublic.com/article/how-to-install-openstack-on-a-single-ubuntu-server-virtual-machine/
   
