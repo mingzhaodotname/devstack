@@ -38,3 +38,7 @@
     * sudo_pip http_proxy=  # e.g. line 337, need to setup the proxy again. (or setup root proxy)
 * potential certificate problem with the proxy:
   * lib/etcd3: wget --no-check-certificate 
+  
+ # use devstack-repo
+ * sudo -E apt install ubuntu-cloud-keyring
+ * comment out git_clone REQUIREMENT in stack.sh
