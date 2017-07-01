@@ -39,6 +39,24 @@
 * potential certificate problem with the proxy:
   * lib/etcd3: wget --no-check-certificate 
   
- # use devstack-repo
- * sudo -E apt install ubuntu-cloud-keyring
- * comment out git_clone REQUIREMENT in stack.sh
+ # use devstack-repo for static ip VM behind a proxy
+ ```
+  # useradd -s /bin/bash -d /opt/stack -m stack
+  # apt-get install sudo -y || yum install -y sudo
+  # echo "stack ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+  # vim ~/.bashrc # setup http_proxy, and https_proxy
+  # su stack
+  $ cd
+  $ vim ~/.bashrc # setup http_proxy, and https_proxy
+  $ get devstack-repo, unzip, and move to /opt/stack 
+  $ use new ipv4 and ipv6 in /opt/stack/devstack/local.conf
+  $ cd devstack
+  $ sudo -E apt install ubuntu-cloud-keyring
+  $ comment out git_clone REQUIREMENT in stack.sh
+  $ inc/python
+    * function pip_install
+    * sudo_pip http_proxy=  # e.g. line 337, need to setup the proxy again. (or setup root proxy)
+  $ potential certificate problem with the proxy:
+    * lib/etcd3: wget --no-check-certificate 
+  $ ./stack.sh
+  ```
