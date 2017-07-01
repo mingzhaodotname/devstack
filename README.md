@@ -49,9 +49,8 @@
   $ cd
   $ vim ~/.bashrc # setup http_proxy, and https_proxy
   $ get devstack-repo, unzip, and move to /opt/stack 
-  $ use new ipv4 and ipv6 in /opt/stack/devstack/local.conf
   $ cd devstack
-  $ sudo -E apt install ubuntu-cloud-keyring
+  $ use new ipv4 and ipv6 and interface in local.conf
   $ comment out git_clone REQUIREMENT in stack.sh
   $ inc/python
     * function pip_install
@@ -59,6 +58,7 @@
   $ potential certificate problem with the proxy:
     * lib/etcd3: wget --no-check-certificate 
   $ mkdir ~/.cache
+  $ sudo -E apt install ubuntu-cloud-keyring
   $ sudo tools/create-stack-user.sh
   $ ./stack.sh
   ```
